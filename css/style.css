@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+#map {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    margin-top: 1em;
+    margin-left: 4em;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-placeholder {
+    width: 250px;
+}
+
+.logo-placeholder img {
+    width: 50px;
+    height: auto;
+    float: left;
+}
+
+.logo-placeholder h1 {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.search-bar {
+    width: 35%;
+    background-color: white;
+    border-radius: 25px;
+    height: 40px;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 5px 10px 5px 10px;
+    margin-right: auto;
+    margin-left: 5em;
+}
+
+.device-infos-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 1em;
+    z-index: 3;
+    margin-bottom: 0;
+    margin-left: 2em;
+}
+
+input.searchinput {
+    outline: none;
+    width: 85%;
+    border: none;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.device-status,
+.device-location {
+    width: 280px;
+    height: 105px;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 5px 15px 5px 10px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.device-info-heading {
+    font-weight: 700;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.device-stat-content {
+    display: inline-block;
+    font-size: 13px;
+    margin-top: -8px;
+    margin-left: 10px;
+}
+
+span.connectivity-indicator,
+span.device-id-container {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 20px 5px 20px;
+    margin-left: 5px;
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+span.connectivity-indicator {
+    background-color: #8FE388;
+}
+
+.device-id-container {
+    background-color: #DFDFDF;
+}
+
+.device-location {
+    height: 90px;
+    margin-top: 1em;
+}
+
+h2.location-name {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+p.location-coordinates {
+    margin-top: 0;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.device-mode-selection {
+    background-color: white;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.device-sensor-datas {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+span.selection-mode {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    color: #A1A1A1;
+}
+
+span.selection-mode.active {
+    color: black !important;
+}
+
+span.selection-mode span,
+span.selection-mode h3 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+span.selection-mode h3 {
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.mode-content-container {
+    background-color: rgba(255, 255, 255, 0.60);
+    height: 200px;
+    width: 100%;
+    padding-top: 10px;
+}  
+
+.parameter-container {
+    margin-left: 30px;
+}
+
+.parameter-container span {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+.parameter-numericals {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 9px;
+}
+
+h2.parameter-heading {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(52, 52, 52);
+    margin-bottom: 3px;
+}
+
+p.parameter-data {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+span.data-classification {
+    background-color: #FFBC42;
+    font-size: 9px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 0px;
+}  
+
+.route-found-container {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #8FE388 2px solid;
+}
+
+.route-found-container span,
+.route-contents-container {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.route-found-container span {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.route-contents-container {
+    margin-left: 10px;
+}
+
+h1.route-distance-heading {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+p.route-indicator {
+    font-size: 12px;
+    margin-top: 2px;
+}
+

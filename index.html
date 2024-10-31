@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climitigate - Rain Monitoring Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="./js/map_processor.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Add these in your head section -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <nav>
+        <div class="logo-placeholder">
+            <img src="img/Logo.png" alt="Climitigate Logo">
+            <h1 class="logo-heading">Climitigate</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Nearby Climitigates" class="searchinput">
+            <span class="material-symbols-outlined" style="margin-top: 6px; float: right; margin-right: 10px;">
+                manage_search
+            </span>
+        </div>
+
+    </nav>
+    <div class="device-infos-container">
+        <div class="device-status">
+            <h1 class="device-info-heading">Device Status</h1>
+            <span class="material-symbols-outlined"
+                style="margin-left: 10px; display: inline-block; vertical-align: top;">
+                signal_wifi_statusbar_not_connected
+            </span>
+            <div class="device-stat-content">
+                <p class="stat-paragraph">Connectivity Status:
+                    <span class="connectivity-indicator">Online</span>
+                </p>
+                <p class="device-id-par">Device ID:
+                    <span class="device-id-container">0110302024</span>
+                </p>
+            </div>
+        </div>
+        <div class="device-location">
+            <h1 class="device-info-heading">Device Location</h1>
+            <span class="material-symbols-outlined"
+                style="margin-left: 10px; display: inline-block; vertical-align: top;">
+                location_on
+            </span>
+            <div class="device-stat-content">
+                <h2 class="location-name">Tapinac Senior High School</h2>
+                <p class="location-coordinates">14.832638348673388, 120.28262190484067</p>
+            </div>
+        </div>
+        <div class="device-sensor-datas">
+            <div class="device-mode-selection">
+                <span class="selection-mode">
+                    <span class="material-symbols-outlined">
+                        readiness_score
+                    </span>
+                    <h3 class="mode-title">
+                        Parameters
+                    </h3>
+                </span>
+                <span class="selection-mode active">
+                    <span class="material-symbols-outlined">
+                        road
+                    </span>
+                    <h3 class="mode-title">
+                        Road Safety
+                    </h3>
+                </span>
+            </div>
+            <div class="mode-content-container">
+                <div class="parameter-mode">
+                    <div class="parameter-container">
+                        <span class="material-symbols-outlined">
+                            rainy
+                        </span>
+                        <div class="parameter-numericals">
+                            <h2 class="parameter-heading">Rain Intensity</h2>
+                            <p class="parameter-data">
+                                5.5mm/h
+                                <span class="data-classification">Medium Rain</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="parameter-container">
+                        <span class="material-symbols-outlined">
+                            humidity_percentage
+                        </span>
+                        <div class="parameter-numericals">
+                            <h2 class="parameter-heading">Relative Humidity</h2>
+                            <p class="parameter-data">
+                                80%
+                                <span class="data-classification">Too Wet</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="parameter-container">
+                        <span class="material-symbols-outlined">
+                            device_thermostat
+                        </span>
+                        <div class="parameter-numericals">
+                            <h2 class="parameter-heading">Temperature</h2>
+                            <p class="parameter-data">
+                                24C
+                                <span class="data-classification">Cold</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="road-safety-mode">
+                    <div class="route-found-container">
+                        <span class="material-symbols-outlined">directions_car</span>
+                        <div class="route-contents-container">
+                            <h1 class="route-distance-heading">3.5km away</h1>
+                            <p class="route-indicator">Road has no signs of rain.</p>
+                        </div>
+                    </div>
+                    <div class="route-found-container">
+                        <span class="material-symbols-outlined">directions_car</span>
+                        <div class="route-contents-container">
+                            <h1 class="route-distance-heading">3.5km away</h1>
+                            <p class="route-indicator">Road has no signs of rain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
